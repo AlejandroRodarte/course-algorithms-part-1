@@ -40,17 +40,18 @@ public class Main {
         Shell.sort(a);
         Shell.sort(b);
 
-        // definer outer and inner array for outer and inner for loops
+        // 4. definer outer and inner array for outer and inner for loops
         // outer array should be the array with the LOWEST amount of items
         Point[] outerArr = a.length < b.length ? a : b;
         Point[] innerArr = a.length < b.length ? b : a;
 
-        // define intersection output array
+        // 5. define intersection output array
         Point[] intersection = new Point[outerArr.length];
 
-        // inner pointer array to avoid evaluating duplicate coordinates
+        // 6. inner pointer array to avoid evaluating duplicate coordinates
         int pointer = 0;
 
+        // 7. double for-loop to check for intersected items
         // outer loop sweeps entire array in search of intersected elements in inner array
         for (int i = 0; i < outerArr.length; i++) {
             // inner loop starts in current pointer value, not index 0
